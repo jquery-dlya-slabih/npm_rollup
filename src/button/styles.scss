@@ -1,0 +1,35 @@
+@use 'sass:color';
+
+.button {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  margin: 14px 0;
+  background-color: #19aa5b;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 0.5px #808080ff;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+
+  &:hover {
+    background-color: color.adjust(#19aa5b, $lightness: -10%);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.warning {
+  background-color: #ffa400;
+
+  &:hover {
+    background-color: color.adjust(#ffa400, $lightness: -10%);
+  }
+}
