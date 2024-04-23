@@ -14,8 +14,8 @@
     "dist"
   ],
   "engines": {
-    "node": ">=18",
-    "npm": ">=9"
+    "node": "18 || >=20",
+    "npm": ">=10"
   },
   "dependencies": {
     "clsx": "^2.1.0",
