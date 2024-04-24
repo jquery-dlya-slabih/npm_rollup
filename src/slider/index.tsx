@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import ReactSlider from 'react-slider';
+import { oldPlus } from 'plus';
 
 import styles from './styles.scss';
 
@@ -9,7 +10,7 @@ interface ISlider {
 
 const Slider: FC<ISlider> = ({ title }) => (
   <div className={styles.container}>
-    {title}
+    {title} {oldPlus('1', '2')}
     <ReactSlider
       className={styles.slider}
       thumbClassName={styles.thumb}

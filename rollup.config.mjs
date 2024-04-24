@@ -6,19 +6,19 @@ import autoExternal from 'rollup-plugin-auto-external';
 import image from '@rollup/plugin-image';
 import typescript from '@rollup/plugin-typescript';
 
-const config = (input, outputPath = '') => ({
-  input,
+export default {
+  input: 'src/index.ts',
   output: [
     {
       dir: 'dist',
       format: 'es',
-      entryFileNames: `${outputPath}[name].es.js`,
+      entryFileNames: `[name].es.js`,
       preserveModules: true
     },
     {
       dir: 'dist',
       format: 'cjs',
-      entryFileNames: `${outputPath}[name].js`,
+      entryFileNames: `[name].js`,
       preserveModules: true,
       exports: 'auto'
     }
@@ -33,7 +33,7 @@ const config = (input, outputPath = '') => ({
     postcss({
       minimize: true,
       modules: true,
-      extract: `${outputPath}index.css`,
+      extract: `index.css`,
       plugins: [postcssUrl({ url: 'inline' })]
     }),
     terser(),
@@ -43,10 +43,4 @@ const config = (input, outputPath = '') => ({
       showGzippedSize: false
     })
   ]
-});
-
-export default [
-  config('src/index.ts'),
-  config('src/button/index.tsx', 'button/'),
-  config('src/slider/index.tsx', 'slider/')
-];
+};
