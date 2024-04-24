@@ -1,3 +1,3 @@
 export { default as Button } from './button';
-export { default as Slider } from './slider';
+export { default as UniqButton } from './uniqButton';
 export { plus, oldPlus } from './plus';

@@ -1,14 +1,20 @@
-import { Button, Slider } from '../src';
+import { Button, UniqButton } from '../src';
 
 const App = () => (
   <section>
     <h1>Витрина для npm-модуля</h1>
-    <Button text='Купить' />
-    <Button
-      text='Купить with warning'
-      warning
-    />
-    <Slider title='Тестовый слайдер' />
+    <div className='container'>
+      <Button text='Просто кнопка' />
+    </div>
+    <div className='container'>
+      <UniqButton text='Кнопка с какой-то функциональностью' />
+    </div>
+    <div className='container'>
+      <UniqButton
+        text='Кнопка с какой-то функциональностью в альтернативной раскраске'
+        alternate
+      />
+    </div>
   </section>
 );
 

@@ -8,15 +8,4 @@ describe('button', () => {
 
     expect(screen.getByText('тест кнопки')).toBeInTheDocument();
   });
-
-  it('render component with warning prop', () => {
-    render(
-      <Button
-        text='тест кнопки'
-        warning
-      />
-    );
-
-    expect(screen.getByText('тест кнопки')).toHaveClass('warning');
-  });
 });
