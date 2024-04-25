@@ -2,12 +2,13 @@
 
 .button {
   box-sizing: border-box;
+  width: 100%;
   padding: 15px 25px;
   background: linear-gradient(to right, #6441a5, #2a0845);
   cursor: pointer;
   border-width: 0;
   border-radius: 8px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -18,12 +19,16 @@
 
   &:hover,
   &:active {
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
   }
 
   &:active {
     box-shadow: none;
+  }
+
+  @media (min-width: 768px) {
+    width: auto;
   }
 }
 
