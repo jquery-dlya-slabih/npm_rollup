@@ -1,7 +1,18 @@
 @use 'sass:color';
 
+.container {
+  display: flex;
+}
+
+.emoji {
+  width: 40px;
+  margin-left: 15px;
+}
+
 .button {
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 15px 25px;
   background: linear-gradient(to right, #6441a5, #2a0845);
@@ -16,6 +27,12 @@
   transition:
     box-shadow 0.2s,
     transform 0.2s;
+
+  &:before {
+    content: url('./emoji.svg');
+    width: 35px;
+    margin-right: 10px;
+  }
 
   &:hover,
   &:active {

@@ -12,13 +12,13 @@ export default {
     {
       dir: 'dist',
       format: 'es',
-      entryFileNames: `[name].es.js`,
+      entryFileNames: '[name].es.js',
       preserveModules: true
     },
     {
       dir: 'dist',
       format: 'cjs',
-      entryFileNames: `[name].js`,
+      entryFileNames: '[name].js',
       preserveModules: true,
       exports: 'auto'
     }
@@ -33,7 +33,7 @@ export default {
     postcss({
       minimize: true,
       modules: true,
-      extract: `index.css`,
+      extract: 'index.css',
       plugins: [postcssUrl({ url: 'inline' })]
     }),
     terser(),

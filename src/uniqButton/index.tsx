@@ -3,6 +3,8 @@ import { clsx } from 'clsx';
 import { plus } from 'plus';
 import uniqueId from 'lodash.uniqueid';
 
+import emoji from './emoji.svg';
+
 import styles from './styles.scss';
 
 interface IUniqButton {
@@ -11,7 +13,7 @@ interface IUniqButton {
 }
 
 const UniqButton: FC<IUniqButton> = ({ text, alternate = false }) => (
-  <>
+  <div className={styles.container}>
     <button
       id={uniqueId('check_button-')}
       className={clsx(styles.button, { [styles.alternate!]: alternate })}
@@ -19,7 +21,12 @@ const UniqButton: FC<IUniqButton> = ({ text, alternate = false }) => (
     >
       {text}
     </button>
-  </>
+    <img
+      src={emoji}
+      alt='emoji with two faces'
+      className={styles.emoji}
+    />
+  </div>
 );
 
 export default UniqButton;
