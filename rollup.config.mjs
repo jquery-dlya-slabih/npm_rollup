@@ -1,10 +1,10 @@
 import terser from '@rollup/plugin-terser';
-import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import postcssUrl from 'postcss-url';
 import image from '@rollup/plugin-image';
 import typescript from '@rollup/plugin-typescript';
 import nodeExternals from 'rollup-plugin-node-externals';
+import size from 'rollup-plugin-size';
 
 export default {
   input: 'src/index.ts',
@@ -35,9 +35,6 @@ export default {
     }),
     nodeExternals(),
     terser(),
-    filesize({
-      showMinifiedSize: false,
-      showGzippedSize: false
-    })
+    size()
   ]
 };
