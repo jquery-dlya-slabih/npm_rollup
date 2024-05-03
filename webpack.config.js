@@ -66,9 +66,7 @@ module.exports = {
         test: /\.(svg|gif|png|jpg|jpeg|webp)$/i,
         type: 'asset',
         parser: {
-          dataUrlCondition: {
-            maxSize: 4 * 1024
-          }
+          dataUrlCondition: () => true
         },
         exclude: /node_modules/
       }
