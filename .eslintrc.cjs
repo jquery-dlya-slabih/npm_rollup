@@ -9,7 +9,7 @@ module.exports = {
     'prettier'
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react-refresh'],
   parserOptions: {
     project: true,
     tsconfigRootDir: __dirname,
@@ -26,6 +26,7 @@ module.exports = {
   root: true,
   rules: {
     'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
   }
 };

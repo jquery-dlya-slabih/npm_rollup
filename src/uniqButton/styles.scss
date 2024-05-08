@@ -28,7 +28,7 @@
     box-shadow 0.2s,
     transform 0.2s;
 
-  &:before {
+  &::before {
     content: url('./emoji.svg');
     width: 35px;
     margin-right: 10px;

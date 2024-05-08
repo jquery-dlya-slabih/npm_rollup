@@ -7,10 +7,6 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: path.resolve('dev', 'index.tsx'),
-  output: {
-    path: path.resolve('dist'),
-    clean: true
-  },
   resolve: {
     modules: ['node_modules'],
     extensions: ['.js', '.ts', '.tsx'],
@@ -77,6 +73,7 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin(),
     new htmlWebpackPlugin({
       filename: 'index.html',
+      favicon: 'dev/webpack.svg',
       template: path.resolve('dev', 'template.html')
     })
   ]
